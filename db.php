@@ -26,5 +26,24 @@ $schema->create($tabela, function ($table) {
     $table->text('descricao');
     $table->decimal('preco', 11, 2);
     $table->string('fabricante', 60);
-    $table->date('dt_criacao');
+    $table->timestamps();
 });
+
+//inserir na tabela
+$db->table($tabela)->insert([
+    'titulo' => 'Smartphone Motorola Moto G6 32GB Dual Chip',
+    'descricao' => 'Android Oreo - 8.0 Tela 5.7" Octa-Core 1.8 GHz 4G Câmera 12 + 5MP (Dual Traseira) - Índigo',
+    'preco' => 899.00,
+    'fabricante' => 'Motorola',
+    'created_at' => '2021-03-24',
+    'updated_at' => '2021-03-24'
+]);
+ 
+$db->table($tabela)->insert([
+    'titulo' => 'iPhone X Cinza Espacial 64GB',
+    'descricao' => 'Tela 5.8" iOS 12 4G Wi-Fi Câmera 12MP - Apple',
+    'preco' => 4999.00,
+    'fabricante' => 'Apple',
+    'created_at' => '2021-03-24',
+    'updated_at' => '2021-03-24'
+]);
