@@ -11,6 +11,8 @@ $app->options('/{routes:.+}', function ($request, $response, $args) {
 
 // Routes
 
+require __DIR__ . '/routes/autenticacao.php';
+
 require __DIR__ . '/routes/produtos.php';
 
 $app->map(['GET', 'POST', 'PUT', 'DELETE'], '/{routes:.+}', function ($req, $res) {
